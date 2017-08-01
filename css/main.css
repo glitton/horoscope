@@ -1,0 +1,117 @@
+/*Horoscope CSS*/
+
+body, html {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.bg-img { 
+    /* The image used */
+    background-image: url(../img/night-sky.jpeg);
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron h1,
+h2,
+h3 {
+    font-family: 'MedievalSharp', cursive;
+    text-align: center;
+    color: #fffcfc;
+    text-shadow:1px 1px 0 #000,
+                -1px -1px 0 #fff,
+                1px -1px 0 #fff,
+                -1px 1px 0 #fff,
+                0px 1px 0 #000,
+                1px 0px 0 #fff,
+                0px -1px 0 #fff,
+                -1px 0px 0 #fff,
+                4px 4px 3px #000;
+    letter-spacing: 3px;            
+    
+}
+
+.heading {
+    margin: 40px auto;
+}
+
+.user-input {
+    width: 40%;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.form-group {
+    display: inline-block;
+}
+
+#month {
+    width: 120px;
+    font-size: 16px;
+    
+}
+
+#day {
+    width: 70px;
+    font-size: 16px;
+
+}
+
+button {
+    font-family: 'MedievalSharp', cursive;
+}
+/*Source: http://charliepark.org/bootstrap_buttons/*/
+.btn-custom {
+  background-color: hsl(206, 100%, 43%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#007cdb", endColorstr="#007cdb");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#007cdb), to(#007cdb));
+  background-image: -moz-linear-gradient(top, #007cdb, #007cdb);
+  background-image: -ms-linear-gradient(top, #007cdb, #007cdb);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #007cdb), color-stop(100%, #007cdb));
+  background-image: -webkit-linear-gradient(top, #007cdb, #007cdb);
+  background-image: -o-linear-gradient(top, #007cdb, #007cdb);
+  background-image: linear-gradient(#007cdb, #007cdb);
+  border-color: #007cdb #007cdb hsl(206, 100%, 43%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.00);
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-lg{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-content{
+    margin-top: -40px;
+}
+
+h1.zodiac {
+    text-transform: capitalize;
+}
+
+p {
+    font-family:'Open Sans', sans-serif;
+    text-align: center;
+    letter-spacing: 4px;
+    padding: 0px 80px;
+    line-height: 35px;
+    color: #F5F5F5;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+}
+
