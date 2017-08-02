@@ -4,7 +4,7 @@ $(document).ready(function() {
   // Hide loader div first
   $("#hidden").hide();  
 
-// This function uses a POST with ajax, jquery request a Horoscope-API
+// This function uses POST request with ajax, jquery to the Horoscope-API
   function showHoroscope(sign){  
 
     $.ajax({
@@ -20,15 +20,24 @@ $(document).ready(function() {
   }    
     // This function enables a loader to display on the page after the user 
     // clicks the submit button
-    function showLoader() {
-      // This shows the loader on the page
-      $("#hidden").show(); 
-      // The setTimeout adds 3 seconds then calls showPage
-      var myVar = setTimeout(showPage, 3000);
-    }
-    // The showPage function hides the loader using display none
-    function showPage() {
-      document.getElementById("loader").style.display = "none";
+    // function showLoader() {
+    //   // This shows the loader on the page
+    //   $("#hidden").show(); 
+    //   // The setTimeout adds 3 seconds then calls showPage
+    //   var myVar = setTimeout(showPage, 3000);
+    // }
+    // // The showPage function hides the loader using display none
+    // function showPage() {
+    //   document.getElementById("loader").style.display = "none";
+    // }
+    // makes sure the whole site is loaded
+    function showHideLoader(){
+      $(window).load(function() {
+        // will first fade out the loading animation
+        $("#status").delay(3000).fadeOut();
+        // will fade out the whole DIV that covers the website after 5 seconds
+        $("#preloader").delay(5000).fadeOut("slow");
+      })
     }
 
   // Using an event listener which is submit button
