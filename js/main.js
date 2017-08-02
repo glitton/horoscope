@@ -1,9 +1,12 @@
 // When page loads, display console
 $(document).ready(function() {
     console.log( "page is loaded" );
+  // Hide loader div first
+  $("#hidden").hide();  
 
+// This function uses a POST with ajax, jquery request a Horoscope-API
   function showHoroscope(sign){  
-  // POST request to the Horoscope-API using ajax and jquery
+
     $.ajax({
       type:'POST',
       url:'https://aztro.herokuapp.com?sign='+sign+'&day=today',
@@ -15,11 +18,23 @@ $(document).ready(function() {
       }
     });
   }    
+    // This function enables a loader to display on the page after the user 
+    // clicks the submit button
+    function showLoader() {
+      // This shows the loader on the page
+      $("#hidden").show(); 
+      // The setTimeout adds 3 seconds then calls showPage
+      var myVar = setTimeout(showPage, 3000);
+    }
+    // The showPage function hides the loader using display none
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+    }
 
-  // Using an event listener 
+  // Using an event listener which is submit button
   //Return zodiac sign depending on user input of month and date
     document.getElementById("submit").addEventListener("click", function(){   
-    // Display zodiac sign
+    // Display zodiac sign, the date, and horoscope for the day
       // Values needed to return zodiac sign, need to be inside the function
       var month = document.getElementById('month').value;
       var day = document.getElementById('day').value;
@@ -28,10 +43,13 @@ $(document).ready(function() {
       
       // var zodiacImg;  TO DO, add image
 
-       console.log("You were born on " + month + ' ' + day); 
+      console.log("You were born on " + month + ' ' + day); 
+      
+
       if((month == 'January' && day <= 20) || (month == 'December' && day >=22)) { sign = getZodiac[0];
         // zodiacImg = 'img/capricorn-2-128.png';
         console.log(sign);
+        showLoader();
         showHoroscope(sign);
 
       } else if ((month == 'January' && day >= 21) || (month == 'February' && day <= 18)) { sign = getZodiac[1];
@@ -79,7 +97,7 @@ $(document).ready(function() {
         console.log(sign);
         showHoroscope(sign);
       }
-
+      // Add the user sign on to the page
       document.getElementById('sign').textContent = sign
       // document.getElementById("zodiac-img").src = zodiacImg; FIX THIS
   });    

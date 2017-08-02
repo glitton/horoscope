@@ -6,7 +6,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Daily Horoscope</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/gl-favicon.ico" type="image/x-icon" />
     <!-- Fonts -->
     <script src="https://use.fontawesome.com/b4869d6fbe.js"></script>
     <link href="https://fonts.googleapis.com/css?family=MedievalSharp|Open+Sans" rel="stylesheet">
@@ -30,6 +30,12 @@
       <h2 class="col-lg-12">What Does Today Have In Store For You?</h2>
       <h3 class="col-lg-12">Choose your Birth Month and Day</h3>
     </div>
+    <!-- This div with id loader adds a loader when user hits submit button -->
+    <!-- When page loads, the outer div uses the hidden class to hide the loader 
+    It shows only when a user clicks the button -->
+    
+      <div id="loader"></div>
+
     <!-- TO DO: ADD Image -->
     <!-- <img id='zodiac-img' src="img/capricorn-2-128.png" alt="zodiac sign"> -->
     <!-- TO DO: Hide day when month doesn't have 31 -->
