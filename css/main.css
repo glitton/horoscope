@@ -14,9 +14,13 @@ body, html {
     height: 100%; 
 
     /* Center and scale the image nicely */
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
 }
 
 .jumbotron h1,
@@ -116,30 +120,31 @@ img {
 }
 
 #preloader  {
-     position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background-color: #fefefe;
-     z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000080;
+    opacity: 0.8;
+    z-index: 99;
     height: 100%;
  }
 
-#status  {
-     width: 200px;
-     height: 200px;
-     position: absolute;
-     left: 50%;
-     top: 50%;
-     background-image: url('http://files.mimoymima.com/images/loading.gif');
-     background-repeat: no-repeat;
-     background-position: center;
-     margin: -100px 0 0 -100px;
- }
+/*#status  {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url('http://files.mimoymima.com/images/loading.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+ }*/
 
 /* CSS for loader this centers the loader */
-/*#loader {
+#status {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -164,7 +169,7 @@ img {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}*/
+}
 
 
 /*TO DO*/
