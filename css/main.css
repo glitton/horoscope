@@ -5,6 +5,10 @@ body, html {
     font-family: 'Open Sans', sans-serif;
     
 }
+/*.jumbotron-fluid {
+  margin-bottom: 0;
+  padding: 0;
+}*/
 
 .bg-img { 
     /* The image used */
@@ -23,7 +27,11 @@ body, html {
 
 }
 
-.jumbotron h1,
+h1 {
+  font-size: 60px;
+}
+
+h1,
 h2,
 h3 {
     font-family: 'MedievalSharp', cursive;
@@ -43,12 +51,12 @@ h3 {
 }
 
 .heading {
-    margin: 40px auto;
+    margin: 50px auto;
 }
 
 .user-input {
     width: 40%;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 30px auto;
     text-align: center;
 }
 
@@ -95,20 +103,23 @@ button {
 }
 
 .main-content{
-    margin-top: -40px;
+    margin-top: -20px;
 }
 
 h1.zodiac {
     text-transform: capitalize;
+    font-size: 50px;
+    margin-top: 36px;
 }
 
-p {
+#message {
     font-family:'Open Sans', sans-serif;
     text-align: center;
-    letter-spacing: 4px;
-    padding: 0px 80px;
-    line-height: 35px;
+    letter-spacing: 3px;
+    padding: 0px 98px;
+    line-height: 32px;
     color: #F5F5F5;
+    font-size: 22px;
 }
 
 img {
@@ -119,31 +130,19 @@ img {
     color: white;
 }
 
+/*CSS when loader is showing*/
 #preloader  {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #000080;
-    opacity: 0.8;
+    background-color: #E6E6FA;
     z-index: 99;
     height: 100%;
  }
 
-/*#status  {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    background-image: url('http://files.mimoymima.com/images/loading.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: -100px 0 0 -100px;
- }*/
-
-/* CSS for loader this centers the loader */
+/* CSS for loader */
 #status {
   position: absolute;
   left: 50%;
@@ -154,7 +153,10 @@ img {
   margin: -75px 0 0 -75px;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid #3498db;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
   width: 120px;
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
@@ -172,7 +174,7 @@ img {
 }
 
 
-/*TO DO*/
+/*TO DO
 /*@media (min-width: 768px){
 
 }*/

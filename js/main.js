@@ -21,13 +21,13 @@ $(document).ready(function() {
 
     function showHideLoader(sign){
       console.log('loader called')
-      // makes sure the whole site is loaded
         // display the preloader div
         $("#preloader").show();
+        $("#status").show();
         // will first fade out the loading animation
         $("#status").delay(3000).fadeOut();
-        // will fade out the whole DIV that covers the website after 5 seconds
-        $("#preloader").delay(5000).fadeOut("slow");
+        // will fade out the whole DIV that covers the website after 2 seconds
+        $("#preloader").delay(1000).fadeOut(2000);
       };
 
   // Using an event listener which is the submit button
