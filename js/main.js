@@ -1,6 +1,7 @@
 // When page loads, display console log message
 $(document).ready(function() {
     console.log( "page is loaded" );
+
   // Hide preloader div 
   $("#preloader").hide();  
 
