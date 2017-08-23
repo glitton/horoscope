@@ -26,9 +26,9 @@ $(document).ready(function() {
         $("#preloader").show();
         $("#status").show();
         // will first fade out the loading animation
-        $("#status").delay(3000).fadeOut();
-        // will fade out the whole DIV that covers the website after 2 seconds
-        $("#preloader").delay(1000).fadeOut(2000);
+        $("#status").delay(5000).fadeOut();
+        // will fade out the whole DIV that covers the website after 3 seconds
+        $("#preloader").delay(2000).fadeOut(3000);
       };
 
   // Using an event listener which is the submit button
