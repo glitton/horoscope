@@ -2,11 +2,14 @@
 $(document).ready(function() {
     console.log( "page is loaded" );
 
+  // // Reload the page
+  // location.reload(true); 
   // Hide preloader div 
   $("#preloader").hide();  
 
 // This function uses POST request with ajax, jquery to the Horoscope-API
-  function showHoroscope(sign){  
+  function showHoroscope(sign){ 
+
 
     $.ajax({
       type:'POST',
