@@ -5,25 +5,21 @@ body, html {
     font-family: 'Open Sans', sans-serif;
     
 }
-/*.jumbotron-fluid {
-  margin-bottom: 0;
-  padding: 0;
-}*/
 
 .bg-img { 
-    /* The image used */
-    background-image: url(../img/night-sky.jpeg);
+  /* The image used */
+  background-image: url(../img/night-sky.jpeg); 
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
 
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+  /* Center and scale the image nicely */
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat-y;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 
 }
 
@@ -65,7 +61,7 @@ h3 {
 }
 
 #month {
-    width: 120px;
+    width: 130px;
     font-size: 16px;
     
 }
@@ -173,9 +169,62 @@ img {
   100% { transform: rotate(360deg); }
 }
 
+@media (min-width: 1024px){
+                          {
+    background-image: url(../img/night-sky.jpeg);
+    width: 100%;
+    height: auto;
+    background-repeat: repeat-y;
+    }
 
-/*TO DO
-/*@media (min-width: 768px){
+}
 
-}*/
+/* ----------- iPad Pro ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    {
+    background-image: url(../img/night-sky.jpeg);
+    width: 100%;
+    height: auto;
+    background-repeat: repeat-y;
+    background-position: center !important;
+    background-size: cover !important;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    {
+    background-image: url(../img/night-sky.jpeg);
+    width: 100%;
+    height: auto;
+    background-repeat: repeat-y;
+    background-position: center !important;
+    background-size: cover !important;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    {
+    background-image: url(../img/night-sky.jpeg);
+    width: 100%;
+    height: auto;
+    background-repeat: repeat-y;
+    background-position: center !important;
+    background-size: cover !important;
+    }
+
+}
 
