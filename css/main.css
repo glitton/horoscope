@@ -169,7 +169,7 @@ img {
   100% { transform: rotate(360deg); }
 }
 
-@media (min-width: 1024px){
+@media (max-width: 1024px){
     {
     background-image: url(../img/night-sky.jpeg);
     width: 100%;
