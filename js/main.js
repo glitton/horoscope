@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     $.ajax({
       type:'POST',
-      url:'https://aztro.herokuapp.com?sign='+sign+'&day=yesterday',
+      url:'https://aztro.herokuapp.com?sign='+sign+'&day=today',
       success:function(data){
       document.getElementById("message").innerHTML = data.description
       document.getElementById("date").innerHTML = data.current_date;
